@@ -6,23 +6,17 @@ import { useEffect,useState } from 'react'
 
 const Home = () => {
   const [blogs,setBlogs] = useState([])
-
-
-
   const fetchBlogs  = async () => {
     const response = await axios.get('http://localhost:2000/blogs')
     setBlogs(response.data.blogs)
-    
   }
   useEffect(()=>{
     fetchBlogs()
   },[])
 
-
   return (
     <>
     <Navbar />
-
     <div className="card" style={{width : "18rem"}}>
   {blogs.map((blog)=>{
     return(
@@ -32,9 +26,7 @@ const Home = () => {
       <p className="card-text">{blog.description}</p>
       <a href="#" className="btn btn-primary">Go somewhere</a>
     </div>
-    )
-     
-    }) 
+    )}) 
   }
       
       </div>
