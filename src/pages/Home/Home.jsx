@@ -24,11 +24,10 @@ const Home = () => {
       <h5 className="card-title"> {blog.title}</h5>
       <h5 className="card-titlse">{blog.subTitle}</h5>
       <p className="card-text">{blog.description}</p>
-      <a href="#" className="btn btn-primary">Go somewhere</a>
+      <a href="#" className="btn btn-primary">Go somewhere</a> 
     </div>
     )}) 
   }
-      
       </div>
     
 
@@ -37,5 +36,4 @@ const Home = () => {
     </>
   )
 }
-
 export default Home
