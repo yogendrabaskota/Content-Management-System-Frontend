@@ -7,8 +7,14 @@ import { useEffect,useState } from 'react'
 const Home = () => {
   const [blogs,setBlogs] = useState([])
   const fetchBlogs  = async () => {
-    const response = await axios.get('http://localhost:2000/blogs')
-    setBlogs(response.data.blogs)
+    try {
+      const response = await axios.get('http://localhost:2000/blogs')
+      setBlogs(response.data.blogs)
+      
+    } catch (error) {      
+      alert("something is wrong")
+    }
+
   }
   useEffect(()=>{
     fetchBlogs()
