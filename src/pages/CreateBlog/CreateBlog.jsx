@@ -28,6 +28,7 @@ const CreateBlog = () => {
     <Navbar />
       <div className="form-container">
         <h2>Create Blog</h2>
+        
     <form onSubmit={createBlog}>
       <div className="form-group">
         <label htmlFor="title">Title</label>
@@ -43,6 +44,7 @@ const CreateBlog = () => {
       </div>
       <button type="submit">Submit</button>
     </form>
+    
       </div>
 
     </>

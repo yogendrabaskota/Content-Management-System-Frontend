@@ -5,9 +5,10 @@ const Navbar = () => {
   const navigate = useNavigate()
 
     return (
+      <>
       <nav className="navbar">
         <div className="navbar-brand">
-          <a href="/">MyMERNApp</a>
+          <a href="/">Content Management System</a>
         </div>
         <ul className="navbar-links">
           <li><a href="/">Home</a></li>
@@ -15,12 +16,13 @@ const Navbar = () => {
           <li><a href="/services">Services</a></li>
           <li><a href="/contact">Contact</a></li> */}
 
-          <div className='"navbar-right'>
-            <a onClick={()=>navigate('/createBlog')} >CreateBlog</a>
-          </div>
+          {/* <div className='navbar-right'> */}
+          <li> <a onClick={()=>navigate('/createBlog')} >CreateBlog</a></li>
+          
         </ul>
       </nav>
+    </>
     )
   }
-  
+ 
   export default Navbar

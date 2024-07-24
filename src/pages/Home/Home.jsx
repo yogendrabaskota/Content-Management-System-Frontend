@@ -1,46 +1,44 @@
-//import React from 'react'
 import axios from 'axios'
 import Navbar from '../../Components/Navbar/Navbar'
-import { useEffect,useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import './Home.css' // Make sure to create this CSS file
 
 const Home = () => {
-  const [blogs,setBlogs] = useState([])
-  const fetchBlogs  = async () => {
+  const [blogs, setBlogs] = useState([])
+  
+  const fetchBlogs = async () => {
     try {
       const response = await axios.get('http://localhost:2000/blogs')
       setBlogs(response.data.blogs)
-      
-    } catch (error) {      
+    } catch (error) {
       alert("something is wrong")
     }
-
   }
-  useEffect(()=>{
+
+  useEffect(() => {
     fetchBlogs()
-  },[])
+  }, [])
 
   return (
     <>
-    <Navbar />
-    <div className="card" style={{width : "18rem"}}>
-  {blogs.map((blog)=>{
-    return(
-      <div key={blog._id} className="card-body">
-      <h5 className="card-title"> {blog.title}</h5>
-      <h5 className="card-titlse">{blog.subTitle}</h5>
-      <p className="card-text">{blog.description}</p>
-       <Link to={`/singleBlog/${blog._id}`}> See More </Link>
-    </div>
-    )}) 
-  }
+      <Navbar />
+      <div className="card-container">
+        {blogs.map((blog) => {
+          return (
+            <div key={blog._id} className="card">
+              <div className="card-body">
+                <h3 className="card-title"> {blog.title}</h3>
+                <h5 className="card-title">{blog.subTitle}</h5>
+                <p className="card-text">{blog.description}</p>
+                <Link to={`/singleBlog/${blog._id}`}> See More </Link>
+              </div>
+            </div>
+          )
+        })}
       </div>
-    
-
-
-
     </>
   )
 }
+
 export default Home

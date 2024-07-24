@@ -1,0 +1,11 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 18rem;
+    flex: 0 0 auto; /* Ensures the cards don't shrink */
+  }
+  

@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f18080;
+    background-color: #c71f1f;
     padding: 1rem;
   }
   
   .navbar-brand a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 1.5rem;
   }
@@ -19,11 +19,11 @@
   }
   
   .navbar-links li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 1rem;
   }
   
   .navbar-links li a:hover {
-    color: #ddd;
+    color: #f4f2f2;
   }
