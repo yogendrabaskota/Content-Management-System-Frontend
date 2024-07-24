@@ -1,7 +1,7 @@
 
 # Content-Management-System:
 
-This is basic nodeJS project, which implements CRUD operation using NodeJs. In this project, i have created 5 APIs for Creating blogs, View(Read) blogs, Updating blogs and Deleteing blogs
+This is basic mern project, which implements CRUD operation using NodeJs. In this project, i have created 5 APIs for Creating blogs, View(Read) blogs, Updating blogs and Deleteing blogs
 
 
 ## How to Run:
@@ -25,10 +25,10 @@ To run this,
 
  ## Output :
  #### Home page: 
-  <img src="./public/output1.png" />
+  <img src="./public/home.png" />
 
 #### Update page:
-  <img src="./public/output2.png" />
+  <img src="./public/update.png" />
 
 
 ## Feedback
